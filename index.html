@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Facility Yoga & Dance — Move. Breathe. Transform.</title>
+  <meta name="description"
+    content="Individual and small group yoga, dance, and movement classes for every body. Facility Yoga & Dance — where all ages, shapes, and sizes come to move." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap"
+    rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav id="main-nav" class="nav">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">
+        <img src="/logo.png" alt="Facility Yoga & Dance" class="nav-logo-img" />
+      </a>
+      <div class="nav-links">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#gallery" class="nav-link">Studio</a>
+        <a href="#schedule" class="nav-link">Schedule</a>
+        <a href="#schedule" class="nav-link nav-link-cta">Book a Class</a>
+      </div>
+      <button id="mobile-menu-btn" class="mobile-menu-btn" aria-label="Open menu">
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu Overlay -->
+  <div id="mobile-menu" class="mobile-menu">
+    <div class="mobile-menu-content">
+      <img src="/logo.png" alt="Facility" class="mobile-logo" />
+      <a href="#about" class="mobile-link">About</a>
+      <a href="#gallery" class="mobile-link">Studio</a>
+      <a href="#schedule" class="mobile-link">Schedule</a>
+      <a href="#schedule" class="mobile-link mobile-link-cta">Book a Class</a>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section id="hero" class="hero">
+    <!-- Organic background shapes -->
+    <div class="hero-bg">
+      <div class="hero-blob hero-blob-1"></div>
+      <div class="hero-blob hero-blob-2"></div>
+      <div class="hero-blob hero-blob-3"></div>
+      <div class="hero-particles" id="hero-particles"></div>
+    </div>
+
+    <div class="hero-content">
+      <div class="hero-logo-wrap">
+        <div class="hero-logo-glow"></div>
+        <img src="/logo.png" alt="Facility Yoga Movement Dance" class="hero-logo" />
+      </div>
+      <h1 class="hero-title reveal-up">
+        <span class="hero-title-line hero-title-thin">Move.</span>
+        <span class="hero-title-line hero-title-thin">Breathe.</span>
+        <span class="hero-title-line hero-title-accent">Transform.</span>
+      </h1>
+      <p class="hero-subtitle reveal-up">Yoga · Movement · Dance for every body.</p>
+      <div class="hero-actions reveal-up">
+        <a href="#schedule" class="btn btn-primary">View Classes</a>
+        <a href="#about" class="btn btn-ghost">Our Story</a>
+      </div>
+    </div>
+
+    <!-- Wave divider -->
+    <div class="wave-divider wave-divider-bottom">
+      <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+        <path d="M0,60 C360,120 720,0 1080,60 C1260,90 1380,80 1440,60 L1440,120 L0,120 Z" />
+      </svg>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about">
+    <div class="section-container">
+      <!-- Pillars row -->
+      <div class="pillars reveal-up">
+        <div class="pillar">
+          <div class="pillar-icon">
+            <svg viewBox="0 0 64 64" fill="none">
+              <circle cx="32" cy="20" r="6" stroke="currentColor" stroke-width="2" />
+              <path d="M32 28v16M24 50l8-6 8 6M22 38h20" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </div>
+          <h3 class="pillar-title">Yoga</h3>
+          <p class="pillar-text">From gentle restorative to power flow — find your practice.</p>
+        </div>
+        <div class="pillar">
+          <div class="pillar-icon">
+            <svg viewBox="0 0 64 64" fill="none">
+              <path d="M20 44c4-8 8-20 12-20s8 12 12 20" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" />
+              <circle cx="32" cy="18" r="5" stroke="currentColor" stroke-width="2" />
+              <path d="M26 34c2 2 4 3 6 3s4-1 6-3" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+            </svg>
+          </div>
+          <h3 class="pillar-title">Dance</h3>
+          <p class="pillar-text">Ballet, contemporary, and movement — for all ages and levels.</p>
+        </div>
+        <div class="pillar">
+          <div class="pillar-icon">
+            <svg viewBox="0 0 64 64" fill="none">
+              <path d="M18 46l10-14 8 8 10-14" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <circle cx="46" cy="22" r="4" stroke="currentColor" stroke-width="2" />
+              <path d="M14 50h36" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+            </svg>
+          </div>
+          <h3 class="pillar-title">Movement</h3>
+          <p class="pillar-text">Agility, mobility, and functional movement for real life.</p>
+        </div>
+      </div>
+
+      <!-- Main about block -->
+      <div class="about-main">
+        <div class="about-text-block reveal-left">
+          <p class="section-eyebrow">About the Studio</p>
+          <h2 class="section-title">Every body<br><span class="serif-accent">moves.</span></h2>
+          <p class="about-lead">
+            Facility Yoga & Dance is built on a simple belief: movement is for <strong>everyone</strong>.
+            Every age, every shape, every size. Whether you're a young athlete sharpening your agility,
+            a child discovering the joy of dance, or someone stepping onto the mat for the very first time —
+            this is your space.
+          </p>
+          <p class="about-body">
+            Our intimate studio offers individual and small group yoga, dance, and movement classes
+            designed to meet you exactly where you are. We use movement to improve agility, build confidence,
+            and create a welcoming space where every body belongs.
+          </p>
+          <div class="about-values">
+            <span class="value-tag">All Ages</span>
+            <span class="value-tag">Small Groups</span>
+            <span class="value-tag">All Levels</span>
+            <span class="value-tag">Individual Attention</span>
+          </div>
+        </div>
+        <div class="about-photos reveal-right">
+          <div class="about-photo about-photo-1">
+            <img src="/photos/warriors.jpg" alt="Young athletes practicing warrior pose" loading="lazy" />
+          </div>
+          <div class="about-photo about-photo-2">
+            <img src="/photos/ballet-girls.jpg" alt="Young ballet dancers at the barre" loading="lazy" />
+          </div>
+          <div class="about-photo-accent"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Wave divider -->
+    <div class="wave-divider wave-divider-bottom wave-green">
+      <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+        <path d="M0,40 C240,100 480,0 720,60 C960,120 1200,20 1440,80 L1440,120 L0,120 Z" />
+      </svg>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section id="gallery" class="gallery">
+    <div class="section-container">
+      <p class="section-eyebrow text-center reveal-up">The Studio</p>
+      <h2 class="section-title text-center reveal-up">Where the<br><span class="serif-accent">magic happens.</span></h2>
+    </div>
+    <div class="gallery-mosaic reveal-up">
+      <div class="mosaic-item mosaic-wide">
+        <img src="/photos/studio-wide.jpg" alt="Studio setup with colorful movement equipment" loading="lazy" />
+        <div class="mosaic-overlay"><span>Our Space</span></div>
+      </div>
+      <div class="mosaic-item mosaic-tall">
+        <img src="/photos/ballet-girls.jpg" alt="Young dancers at the barre" loading="lazy" />
+        <div class="mosaic-overlay"><span>Dance</span></div>
+      </div>
+      <div class="mosaic-item">
+        <img src="/photos/warriors.jpg" alt="Group yoga warrior pose" loading="lazy" />
+        <div class="mosaic-overlay"><span>Yoga</span></div>
+      </div>
+      <div class="mosaic-item">
+        <img src="/photos/agility-setup.jpg" alt="Agility and movement setup" loading="lazy" />
+        <div class="mosaic-overlay"><span>Movement</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Marquee / Moving Text -->
+  <div class="marquee-section">
+    <div class="marquee-track" id="marquee-track">
+      <span class="marquee-item">Move ✦</span>
+      <span class="marquee-item">Breathe ✦</span>
+      <span class="marquee-item">Transform ✦</span>
+      <span class="marquee-item">Stretch ✦</span>
+      <span class="marquee-item">Flow ✦</span>
+      <span class="marquee-item">Dance ✦</span>
+      <span class="marquee-item">Grow ✦</span>
+      <span class="marquee-item">Balance ✦</span>
+      <span class="marquee-item">Move ✦</span>
+      <span class="marquee-item">Breathe ✦</span>
+      <span class="marquee-item">Transform ✦</span>
+      <span class="marquee-item">Stretch ✦</span>
+      <span class="marquee-item">Flow ✦</span>
+      <span class="marquee-item">Dance ✦</span>
+      <span class="marquee-item">Grow ✦</span>
+      <span class="marquee-item">Balance ✦</span>
+    </div>
+  </div>
+
+  <!-- Schedule Section -->
+  <section id="schedule" class="schedule">
+    <div class="section-container">
+      <p class="section-eyebrow text-center reveal-up">Schedule</p>
+      <h2 class="section-title text-center reveal-up">Find your<br><span class="serif-accent">next class.</span></h2>
+
+      <!-- Calendar Navigation -->
+      <div class="calendar-nav reveal-up">
+        <button id="cal-prev-week" class="cal-nav-btn" aria-label="Previous week">
+          <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
+            <path d="M13 4L7 10L13 16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+        </button>
+        <h3 id="cal-week-label" class="cal-week-label"></h3>
+        <button id="cal-next-week" class="cal-nav-btn" aria-label="Next week">
+          <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
+            <path d="M7 4L13 10L7 16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+        </button>
+      </div>
+
+      <!-- View Toggle -->
+      <div class="view-toggle reveal-up">
+        <button class="view-btn active" data-view="week" id="view-week-btn">Week</button>
+        <button class="view-btn" data-view="list" id="view-list-btn">List</button>
+      </div>
+
+      <!-- Calendar Grid -->
+      <div id="calendar-container" class="calendar-container reveal-up">
+        <div id="calendar-week" class="calendar-week"></div>
+        <div id="calendar-list" class="calendar-list hidden"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Class Detail Modal -->
+  <div id="class-modal" class="modal-overlay">
+    <div class="modal" role="dialog" aria-modal="true">
+      <button id="modal-close" class="modal-close" aria-label="Close">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+          <path d="M5 5L15 15M15 5L5 15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+        </svg>
+      </button>
+      <div class="modal-header">
+        <span id="modal-type-badge" class="class-type-badge"></span>
+        <h3 id="modal-title" class="modal-title"></h3>
+        <p id="modal-datetime" class="modal-datetime"></p>
+      </div>
+      <div class="modal-body">
+        <div class="modal-info-grid">
+          <div class="modal-info-item">
+            <span class="modal-info-label">Instructor</span>
+            <span id="modal-instructor" class="modal-info-value"></span>
+          </div>
+          <div class="modal-info-item">
+            <span class="modal-info-label">Duration</span>
+            <span id="modal-duration" class="modal-info-value"></span>
+          </div>
+          <div class="modal-info-item">
+            <span class="modal-info-label">Level</span>
+            <span id="modal-level" class="modal-info-value"></span>
+          </div>
+          <div class="modal-info-item">
+            <span class="modal-info-label">Spots Left</span>
+            <span id="modal-spots" class="modal-info-value"></span>
+          </div>
+        </div>
+        <div class="modal-description">
+          <h4>About This Class</h4>
+          <p id="modal-description-text"></p>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <div class="modal-price">
+          <span id="modal-price" class="price-value"></span>
+          <span class="price-label">per class</span>
+        </div>
+        <button id="modal-book-btn" class="btn btn-primary btn-book">Book This Class</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Booking Confirmation Modal -->
+  <div id="booking-modal" class="modal-overlay">
+    <div class="modal booking-modal" role="dialog" aria-modal="true">
+      <button id="booking-modal-close" class="modal-close" aria-label="Close">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+          <path d="M5 5L15 15M15 5L5 15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+        </svg>
+      </button>
+      <div id="booking-step-1" class="booking-step">
+        <div class="booking-step-header">
+          <div class="booking-progress">
+            <div class="progress-step active">1</div>
+            <div class="progress-line"></div>
+            <div class="progress-step">2</div>
+          </div>
+          <h3 class="modal-title">Book Your Spot</h3>
+          <p id="booking-class-summary" class="booking-summary"></p>
+        </div>
+        <form id="booking-form" class="booking-form">
+          <div class="form-group">
+            <label for="booking-name">Full Name</label>
+            <input type="text" id="booking-name" placeholder="Jane Smith" required />
+          </div>
+          <div class="form-group">
+            <label for="booking-email">Email</label>
+            <input type="email" id="booking-email" placeholder="jane@example.com" required />
+          </div>
+          <div class="form-group">
+            <label for="booking-phone">Phone <span class="optional">(optional)</span></label>
+            <input type="tel" id="booking-phone" placeholder="(555) 123-4567" />
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">Continue to Payment</button>
+        </form>
+      </div>
+      <div id="booking-step-2" class="booking-step hidden">
+        <div class="booking-step-header">
+          <div class="booking-progress">
+            <div class="progress-step completed">✓</div>
+            <div class="progress-line active"></div>
+            <div class="progress-step active">2</div>
+          </div>
+          <h3 class="modal-title">Payment</h3>
+        </div>
+        <div class="payment-placeholder">
+          <div class="payment-icon">
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+              <rect x="4" y="12" width="40" height="28" rx="4" stroke="currentColor" stroke-width="2" />
+              <path d="M4 20H44" stroke="currentColor" stroke-width="2" />
+              <rect x="8" y="28" width="12" height="4" rx="1" stroke="currentColor" stroke-width="1.5" />
+            </svg>
+          </div>
+          <h4>Payment Coming Soon</h4>
+          <p>Payment processing will be available shortly. Your booking request has been noted!</p>
+          <div id="booking-confirmation" class="booking-confirmation">
+            <div class="confirmation-check">
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                <circle cx="16" cy="16" r="15" stroke="currentColor" stroke-width="2" />
+                <path d="M10 16L14 20L22 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </div>
+            <p class="confirmation-text">Booking request received!</p>
+            <p id="booking-confirm-details" class="confirmation-details"></p>
+          </div>
+          <button id="booking-done-btn" class="btn btn-primary btn-full">Done</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="wave-divider wave-divider-top wave-dark">
+      <svg viewBox="0 0 1440 100" preserveAspectRatio="none">
+        <path d="M0,60 C360,0 720,100 1080,40 C1260,10 1380,30 1440,60 L1440,100 L0,100 Z" />
+      </svg>
+    </div>
+    <div class="footer-inner">
+      <div class="section-container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <img src="/logo.png" alt="Facility Yoga & Dance" class="footer-logo-img" />
+            <p class="footer-tagline">Movement for every body.</p>
+          </div>
+          <div class="footer-links">
+            <h4>Explore</h4>
+            <a href="#about">About</a>
+            <a href="#gallery">Studio</a>
+            <a href="#schedule">Schedule</a>
+          </div>
+          <div class="footer-links">
+            <h4>Connect</h4>
+            <a href="https://www.facebook.com/people/Facility-Yoga-Dance-LLC/61557547375943/" target="_blank"
+              rel="noopener">Facebook</a>
+            <a href="mailto:hello@facilityyoga.com">Email Us</a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2026 Facility Yoga & Dance, LLC. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>

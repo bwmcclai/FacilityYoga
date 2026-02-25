@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin — Facility Yoga & Dance</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="stylesheet" href="/src/admin.css" />
+</head>
+
+<body>
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <img src="/logo.png" alt="Facility" class="sidebar-logo" />
+            <span class="sidebar-title">Admin</span>
+        </div>
+        <nav class="sidebar-nav">
+            <button class="sidebar-link active" data-tab="dashboard" id="nav-dashboard">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <rect x="2" y="2" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="1.5" />
+                    <rect x="11" y="2" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="1.5" />
+                    <rect x="2" y="11" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="1.5" />
+                    <rect x="11" y="11" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="1.5" />
+                </svg>
+                Dashboard
+            </button>
+            <button class="sidebar-link" data-tab="bookings" id="nav-bookings">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M4 4h12v14H4z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
+                    <path d="M7 8h6M7 11h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                </svg>
+                Bookings
+            </button>
+            <button class="sidebar-link" data-tab="classes" id="nav-classes">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <rect x="2" y="3" width="16" height="14" rx="2" stroke="currentColor" stroke-width="1.5" />
+                    <path d="M2 7h16M6 3v4M14 3v4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                </svg>
+                Classes
+            </button>
+        </nav>
+        <div class="sidebar-footer">
+            <a href="/" class="sidebar-back">← Back to Website</a>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="admin-main">
+        <!-- Top bar -->
+        <header class="admin-topbar">
+            <button class="mobile-sidebar-btn" id="mobile-sidebar-btn">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M3 5h14M3 10h14M3 15h14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                </svg>
+            </button>
+            <h1 class="topbar-title" id="topbar-title">Dashboard</h1>
+            <div class="topbar-right">
+                <span class="topbar-date" id="topbar-date"></span>
+            </div>
+        </header>
+
+        <!-- Dashboard Tab -->
+        <div class="tab-content active" id="tab-dashboard">
+            <div class="stats-row">
+                <div class="stat-card">
+                    <div class="stat-card-icon green">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M4 4h16v18H4z" stroke="currentColor" stroke-width="1.5" />
+                            <path d="M8 9h8M8 13h5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                        </svg>
+                    </div>
+                    <div>
+                        <div class="stat-card-value" id="stat-bookings">24</div>
+                        <div class="stat-card-label">Total Bookings</div>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-card-icon purple">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="1.5" />
+                            <path d="M4 20c0-4 4-7 8-7s8 3 8 7" stroke="currentColor" stroke-width="1.5"
+                                stroke-linecap="round" />
+                        </svg>
+                    </div>
+                    <div>
+                        <div class="stat-card-value" id="stat-students">18</div>
+                        <div class="stat-card-label">Active Students</div>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-card-icon blue">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <rect x="3" y="4" width="18" height="16" rx="2" stroke="currentColor" stroke-width="1.5" />
+                            <path d="M3 9h18M7 4v5M17 4v5" stroke="currentColor" stroke-width="1.5"
+                                stroke-linecap="round" />
+                        </svg>
+                    </div>
+                    <div>
+                        <div class="stat-card-value" id="stat-classes">12</div>
+                        <div class="stat-card-label">Classes / Week</div>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-card-icon gold">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M12 2v20M17 5H9.5a3.5 3.5 0 100 7h5a3.5 3.5 0 010 7H6" stroke="currentColor"
+                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <div>
+                        <div class="stat-card-value" id="stat-revenue">$412</div>
+                        <div class="stat-card-label">This Week</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recent bookings quick view -->
+            <div class="admin-card">
+                <div class="admin-card-header">
+                    <h2>Recent Bookings</h2>
+                    <button class="link-btn" id="dash-view-all-bookings">View All →</button>
+                </div>
+                <div class="admin-table-wrap">
+                    <table class="admin-table" id="recent-bookings-table">
+                        <thead>
+                            <tr>
+                                <th>Student</th>
+                                <th>Class</th>
+                                <th>Date</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Today's classes -->
+            <div class="admin-card">
+                <div class="admin-card-header">
+                    <h2>Upcoming Classes</h2>
+                </div>
+                <div class="upcoming-classes" id="upcoming-classes"></div>
+            </div>
+        </div>
+
+        <!-- Bookings Tab -->
+        <div class="tab-content" id="tab-bookings">
+            <div class="admin-card">
+                <div class="admin-card-header">
+                    <h2>All Bookings</h2>
+                    <div class="header-actions">
+                        <div class="filter-group">
+                            <select id="booking-filter-class" class="admin-select">
+                                <option value="">All Classes</option>
+                            </select>
+                            <select id="booking-filter-status" class="admin-select">
+                                <option value="">All Statuses</option>
+                                <option value="confirmed">Confirmed</option>
+                                <option value="pending">Pending</option>
+                                <option value="cancelled">Cancelled</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="admin-table-wrap">
+                    <table class="admin-table" id="all-bookings-table">
+                        <thead>
+                            <tr>
+                                <th>Student</th>
+                                <th>Email</th>
+                                <th>Class</th>
+                                <th>Date & Time</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- Classes Tab -->
+        <div class="tab-content" id="tab-classes">
+            <div class="admin-card">
+                <div class="admin-card-header">
+                    <h2>Manage Classes</h2>
+                    <button class="btn-admin-primary" id="add-class-btn">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path d="M8 3v10M3 8h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                        </svg>
+                        Add Class
+                    </button>
+                </div>
+                <div class="classes-grid" id="classes-grid"></div>
+            </div>
+
+            <!-- Add/Edit Class Modal -->
+            <div id="class-form-modal" class="admin-modal-overlay">
+                <div class="admin-modal">
+                    <div class="admin-modal-header">
+                        <h3 id="class-form-title">Add New Class</h3>
+                        <button class="modal-close" id="class-form-close">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M5 5L15 15M15 5L5 15" stroke="currentColor" stroke-width="1.5"
+                                    stroke-linecap="round" />
+                            </svg>
+                        </button>
+                    </div>
+                    <form id="class-form" class="admin-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Class Name</label>
+                                <input type="text" id="cf-name" placeholder="e.g. Morning Vinyasa Flow" required />
+                            </div>
+                            <div class="form-group">
+                                <label>Type</label>
+                                <select id="cf-type" required>
+                                    <option value="yoga">Yoga</option>
+                                    <option value="dance">Dance</option>
+                                    <option value="movement">Movement</option>
+                                    <option value="agility">Agility</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Instructor</label>
+                                <input type="text" id="cf-instructor" placeholder="e.g. Sarah Mitchell" required />
+                            </div>
+                            <div class="form-group">
+                                <label>Level</label>
+                                <select id="cf-level" required>
+                                    <option value="All Levels">All Levels</option>
+                                    <option value="Beginner">Beginner</option>
+                                    <option value="Intermediate">Intermediate</option>
+                                    <option value="Kids">Kids</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-row form-row-3">
+                            <div class="form-group">
+                                <label>Day</label>
+                                <select id="cf-day" required>
+                                    <option value="0">Sunday</option>
+                                    <option value="1">Monday</option>
+                                    <option value="2">Tuesday</option>
+                                    <option value="3">Wednesday</option>
+                                    <option value="4">Thursday</option>
+                                    <option value="5">Friday</option>
+                                    <option value="6">Saturday</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Time</label>
+                                <input type="time" id="cf-time" required />
+                            </div>
+                            <div class="form-group">
+                                <label>Duration (min)</label>
+                                <input type="number" id="cf-duration" value="60" min="15" max="120" required />
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Price ($)</label>
+                                <input type="number" id="cf-price" value="18" min="0" step="1" required />
+                            </div>
+                            <div class="form-group">
+                                <label>Max Students</label>
+                                <input type="number" id="cf-max" value="8" min="1" max="30" required />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Description</label>
+                            <textarea id="cf-description" rows="3" placeholder="Brief class description..."></textarea>
+                        </div>
+                        <div class="form-actions">
+                            <button type="button" class="btn-admin-ghost" id="class-form-cancel">Cancel</button>
+                            <button type="submit" class="btn-admin-primary">Save Class</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script type="module" src="/src/admin.js"></script>
+</body>
+
+</html>
