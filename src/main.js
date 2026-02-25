@@ -1,93 +1,21 @@
 import './style.css';
 
 // ===================================================
-// MOCK DATA — Replace with Supabase later
+// MOCK DATA
 // ===================================================
 const CLASSES = [
-  {
-    id: 1, name: 'Morning Vinyasa Flow', type: 'yoga',
-    instructor: 'Sarah Mitchell', duration: '60 min', level: 'All Levels',
-    price: '$18', spots: 6, maxSpots: 8,
-    description: 'Start your day with an energizing vinyasa flow that links breath to movement. This class builds heat, strength, and flexibility while cultivating mindfulness. Modifications offered for all levels.',
-    dayOfWeek: 1, hour: 9, minute: 0,
-  },
-  {
-    id: 2, name: 'Gentle Yoga & Restore', type: 'yoga',
-    instructor: 'Sarah Mitchell', duration: '75 min', level: 'Beginner',
-    price: '$20', spots: 4, maxSpots: 8,
-    description: 'A slower-paced class focused on deep stretching, restorative poses, and guided relaxation. Perfect for unwinding, recovering, or easing into a yoga practice.',
-    dayOfWeek: 2, hour: 10, minute: 30,
-  },
-  {
-    id: 3, name: 'Dance Cardio Fusion', type: 'dance',
-    instructor: 'Mia Torres', duration: '45 min', level: 'All Levels',
-    price: '$15', spots: 7, maxSpots: 8,
-    description: 'Get your heart pumping with this high-energy dance cardio class! Blending contemporary, hip-hop, and Latin-inspired moves into a fun, full-body workout.',
-    dayOfWeek: 2, hour: 18, minute: 0,
-  },
-  {
-    id: 4, name: 'Power Yoga', type: 'yoga',
-    instructor: 'Sarah Mitchell', duration: '60 min', level: 'Intermediate',
-    price: '$18', spots: 3, maxSpots: 8,
-    description: 'A challenging, fitness-based vinyasa practice that builds strength, endurance, and focus. Expect arm balances, inversions, and creative sequencing.',
-    dayOfWeek: 3, hour: 7, minute: 0,
-  },
-  {
-    id: 5, name: 'Movement & Agility', type: 'agility',
-    instructor: 'Jake Rivera', duration: '50 min', level: 'All Levels',
-    price: '$16', spots: 5, maxSpots: 8,
-    description: 'Functional movement patterns, mobility drills, and agility work designed to improve how your body moves in everyday life. Great for athletes and anyone looking to move better.',
-    dayOfWeek: 3, hour: 17, minute: 30,
-  },
-  {
-    id: 6, name: 'Yin Yoga', type: 'yoga',
-    instructor: 'Sarah Mitchell', duration: '75 min', level: 'All Levels',
-    price: '$20', spots: 6, maxSpots: 8,
-    description: 'Hold poses for 3-5 minutes to target deep connective tissues. This meditative practice improves flexibility, circulation, and joint health.',
-    dayOfWeek: 4, hour: 10, minute: 0,
-  },
-  {
-    id: 7, name: 'Contemporary Dance', type: 'dance',
-    instructor: 'Mia Torres', duration: '60 min', level: 'Intermediate',
-    price: '$18', spots: 5, maxSpots: 8,
-    description: 'Explore expression through contemporary dance technique. Includes warm-up, floor work, across-the-floor combinations, and choreography.',
-    dayOfWeek: 4, hour: 19, minute: 0,
-  },
-  {
-    id: 8, name: 'Morning Vinyasa Flow', type: 'yoga',
-    instructor: 'Sarah Mitchell', duration: '60 min', level: 'All Levels',
-    price: '$18', spots: 8, maxSpots: 8,
-    description: 'Start your day with an energizing vinyasa flow linking breath to movement.',
-    dayOfWeek: 5, hour: 9, minute: 0,
-  },
-  {
-    id: 9, name: 'Kids Movement & Agility', type: 'agility',
-    instructor: 'Jake Rivera', duration: '45 min', level: 'Kids',
-    price: '$14', spots: 6, maxSpots: 8,
-    description: 'Fun, engaging movement activities for kids! Build coordination, balance, and agility through play-based exercises and obstacle courses.',
-    dayOfWeek: 5, hour: 15, minute: 30,
-  },
-  {
-    id: 10, name: 'Weekend Flow & Restore', type: 'yoga',
-    instructor: 'Sarah Mitchell', duration: '90 min', level: 'All Levels',
-    price: '$25', spots: 5, maxSpots: 8,
-    description: 'The ultimate weekend treat — a 90-minute journey from an invigorating flow into deep restorative poses with aromatherapy.',
-    dayOfWeek: 6, hour: 10, minute: 0,
-  },
-  {
-    id: 11, name: 'Ballet Basics (Kids)', type: 'dance',
-    instructor: 'Mia Torres', duration: '45 min', level: 'Kids',
-    price: '$14', spots: 8, maxSpots: 8,
-    description: 'Introduce your child to the magic of ballet! Learn basic positions, simple choreography, and creative movement in a fun, encouraging environment.',
-    dayOfWeek: 6, hour: 12, minute: 0,
-  },
-  {
-    id: 12, name: 'Sunday Slow Flow', type: 'yoga',
-    instructor: 'Sarah Mitchell', duration: '60 min', level: 'Beginner',
-    price: '$18', spots: 7, maxSpots: 8,
-    description: 'Ease into your Sunday with a gentle, mindful flow. Slower transitions, longer holds, and plenty of breathing space.',
-    dayOfWeek: 0, hour: 10, minute: 30,
-  },
+  { id: 1, name: 'Morning Vinyasa Flow', type: 'yoga', instructor: 'Sarah Mitchell', duration: '60 min', level: 'All Levels', price: '$18', spots: 6, maxSpots: 8, desc: 'An energizing vinyasa flow linking breath to movement. Builds heat, strength, and flexibility. Modifications for all levels.', dayOfWeek: 1, hour: 9, minute: 0 },
+  { id: 2, name: 'Gentle Yoga & Restore', type: 'yoga', instructor: 'Sarah Mitchell', duration: '75 min', level: 'Beginner', price: '$20', spots: 4, maxSpots: 8, desc: 'Deep stretching, restorative poses, and guided relaxation. Perfect for recovery or easing into yoga.', dayOfWeek: 2, hour: 10, minute: 30 },
+  { id: 3, name: 'Dance Cardio Fusion', type: 'dance', instructor: 'Mia Torres', duration: '45 min', level: 'All Levels', price: '$15', spots: 7, maxSpots: 8, desc: 'High-energy dance cardio blending contemporary, hip-hop, and Latin-inspired moves. No experience needed.', dayOfWeek: 2, hour: 18, minute: 0 },
+  { id: 4, name: 'Power Yoga', type: 'yoga', instructor: 'Sarah Mitchell', duration: '60 min', level: 'Intermediate', price: '$18', spots: 3, maxSpots: 8, desc: 'A challenging, fitness-based practice with arm balances, inversions, and creative sequencing.', dayOfWeek: 3, hour: 7, minute: 0 },
+  { id: 5, name: 'Movement & Agility', type: 'agility', instructor: 'Jake Rivera', duration: '50 min', level: 'All Levels', price: '$16', spots: 5, maxSpots: 8, desc: 'Functional movement patterns, mobility drills, and agility work for everyday life.', dayOfWeek: 3, hour: 17, minute: 30 },
+  { id: 6, name: 'Yin Yoga', type: 'yoga', instructor: 'Sarah Mitchell', duration: '75 min', level: 'All Levels', price: '$20', spots: 6, maxSpots: 8, desc: 'Hold poses for 3-5 minutes to target deep connective tissues. Meditative and calming.', dayOfWeek: 4, hour: 10, minute: 0 },
+  { id: 7, name: 'Contemporary Dance', type: 'dance', instructor: 'Mia Torres', duration: '60 min', level: 'Intermediate', price: '$18', spots: 5, maxSpots: 8, desc: 'Explore expression through contemporary technique including floor work and choreography.', dayOfWeek: 4, hour: 19, minute: 0 },
+  { id: 8, name: 'Morning Vinyasa Flow', type: 'yoga', instructor: 'Sarah Mitchell', duration: '60 min', level: 'All Levels', price: '$18', spots: 8, maxSpots: 8, desc: 'Start your day with breath and movement.', dayOfWeek: 5, hour: 9, minute: 0 },
+  { id: 9, name: 'Kids Movement & Agility', type: 'agility', instructor: 'Jake Rivera', duration: '45 min', level: 'Kids', price: '$14', spots: 6, maxSpots: 8, desc: 'Fun movement activities for kids — coordination, balance, and agility through play.', dayOfWeek: 5, hour: 15, minute: 30 },
+  { id: 10, name: 'Weekend Flow & Restore', type: 'yoga', instructor: 'Sarah Mitchell', duration: '90 min', level: 'All Levels', price: '$25', spots: 5, maxSpots: 8, desc: 'A 90-minute journey from invigorating flow into deep restorative poses.', dayOfWeek: 6, hour: 10, minute: 0 },
+  { id: 11, name: 'Ballet Basics (Kids)', type: 'dance', instructor: 'Mia Torres', duration: '45 min', level: 'Kids', price: '$14', spots: 8, maxSpots: 8, desc: 'Introduce your child to ballet! Basic positions, simple choreography, and creative movement.', dayOfWeek: 6, hour: 12, minute: 0 },
+  { id: 12, name: 'Sunday Slow Flow', type: 'yoga', instructor: 'Sarah Mitchell', duration: '60 min', level: 'Beginner', price: '$18', spots: 7, maxSpots: 8, desc: 'A gentle, mindful flow to ease into your Sunday.', dayOfWeek: 0, hour: 10, minute: 30 },
 ];
 
 
@@ -96,322 +24,251 @@ const CLASSES = [
 // ===================================================
 document.addEventListener('DOMContentLoaded', () => {
   initNav();
-  initHeroParticles();
-  initRevealAnimations();
+  initParallax();
+  initReveal();
+  initHeroAnimation();
   initCalendar();
   initModals();
 });
 
 
 // ===================================================
-// NAVIGATION
+// NAV
 // ===================================================
 function initNav() {
-  const nav = document.getElementById('main-nav');
-  const mobileBtn = document.getElementById('mobile-menu-btn');
-  const mobileMenu = document.getElementById('mobile-menu');
-  const mobileLinks = mobileMenu.querySelectorAll('.mobile-link');
+  const nav = document.getElementById('nav');
+  const btn = document.getElementById('mobile-menu-btn');
+  const menu = document.getElementById('mobile-menu');
 
   window.addEventListener('scroll', () => {
-    nav.classList.toggle('scrolled', window.scrollY > 40);
+    nav.classList.toggle('solid', window.scrollY > 80);
   });
 
-  mobileBtn.addEventListener('click', () => {
-    mobileBtn.classList.toggle('active');
-    mobileMenu.classList.toggle('active');
-    document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
+  btn.addEventListener('click', () => {
+    btn.classList.toggle('active');
+    menu.classList.toggle('open');
+    document.body.style.overflow = menu.classList.contains('open') ? 'hidden' : '';
   });
 
-  mobileLinks.forEach(link => {
-    link.addEventListener('click', () => {
-      mobileBtn.classList.remove('active');
-      mobileMenu.classList.remove('active');
+  menu.querySelectorAll('.mm-link').forEach(l => {
+    l.addEventListener('click', () => {
+      btn.classList.remove('active');
+      menu.classList.remove('open');
       document.body.style.overflow = '';
     });
   });
 
   document.querySelectorAll('a[href^="#"]').forEach(a => {
-    a.addEventListener('click', (e) => {
-      const target = document.querySelector(a.getAttribute('href'));
-      if (target) {
-        e.preventDefault();
-        target.scrollIntoView({ behavior: 'smooth' });
-      }
+    a.addEventListener('click', e => {
+      const t = document.querySelector(a.getAttribute('href'));
+      if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth' }); }
     });
   });
 }
 
 
 // ===================================================
-// HERO PARTICLES — leaf-like floating dots
+// PARALLAX
 // ===================================================
-function initHeroParticles() {
-  const container = document.getElementById('hero-particles');
-  if (!container) return;
+function initParallax() {
+  const heroBg = document.getElementById('hero-bg');
+  const dividerBg = document.getElementById('divider-bg');
 
-  const colors = ['#b3cf93', '#d1e2bd', '#b8a9d4', '#89c4e1', '#d4a843'];
-  const count = 25;
+  window.addEventListener('scroll', () => {
+    const y = window.scrollY;
 
-  for (let i = 0; i < count; i++) {
-    const p = document.createElement('div');
-    p.classList.add('hero-particle');
-    const color = colors[Math.floor(Math.random() * colors.length)];
-    const size = 3 + Math.random() * 5;
-    p.style.cssText = `
-      left: ${Math.random() * 100}%;
-      width: ${size}px;
-      height: ${size}px;
-      background: ${color};
-      animation-duration: ${10 + Math.random() * 15}s;
-      animation-delay: ${Math.random() * 12}s;
-    `;
-    container.appendChild(p);
-  }
+    // Hero parallax — move slower than scroll
+    if (heroBg) {
+      const heroH = document.querySelector('.hero').offsetHeight;
+      if (y < heroH) {
+        heroBg.style.transform = `translateY(${y * 0.35}px) scale(1.1)`;
+      }
+    }
+
+    // Divider parallax
+    if (dividerBg) {
+      const rect = dividerBg.closest('.parallax-divider').getBoundingClientRect();
+      const viewH = window.innerHeight;
+      if (rect.top < viewH && rect.bottom > 0) {
+        const progress = (viewH - rect.top) / (viewH + rect.height);
+        dividerBg.style.transform = `translateY(${(progress - 0.5) * 80}px) scale(1.15)`;
+      }
+    }
+
+    // Fade scroll hint
+    const hint = document.getElementById('scroll-hint');
+    if (hint) {
+      hint.style.opacity = Math.max(0, 1 - y / 200);
+    }
+  });
 }
 
 
 // ===================================================
-// REVEAL ANIMATIONS
+// HERO — "Movement for Everybody" → "Every Body" animation
 // ===================================================
-function initRevealAnimations() {
-  const elements = document.querySelectorAll('.reveal-up, .reveal-left, .reveal-right');
+function initHeroAnimation() {
+  const el = document.getElementById('hero-wordplay');
+  if (!el) return;
 
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('revealed');
-          observer.unobserve(entry.target);
-        }
-      });
-    },
-    { threshold: 0.12, rootMargin: '0px 0px -50px 0px' }
-  );
+  // Phase 1: Show "Everybody" joined (already visible via CSS)
+  // Phase 2: After delay, split into "Every Body" with a gap animation
+  setTimeout(() => {
+    el.classList.add('split');
+  }, 2800);
+}
 
-  elements.forEach((el) => observer.observe(el));
+
+// ===================================================
+// SCROLL REVEAL
+// ===================================================
+function initReveal() {
+  const els = document.querySelectorAll('.reveal');
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('in'); obs.unobserve(e.target); }
+    });
+  }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+  els.forEach(el => obs.observe(el));
 }
 
 
 // ===================================================
 // CALENDAR
 // ===================================================
-let currentWeekStart = getStartOfWeek(new Date());
+let weekStart = getWeekStart(new Date());
 
-function getStartOfWeek(date) {
-  const d = new Date(date);
-  d.setDate(d.getDate() - d.getDay());
-  d.setHours(0, 0, 0, 0);
-  return d;
+function getWeekStart(d) {
+  const r = new Date(d);
+  r.setDate(r.getDate() - r.getDay());
+  r.setHours(0, 0, 0, 0);
+  return r;
 }
 
 function initCalendar() {
-  renderCalendar();
-
-  document.getElementById('cal-prev-week').addEventListener('click', () => {
-    currentWeekStart.setDate(currentWeekStart.getDate() - 7);
-    renderCalendar();
-  });
-
-  document.getElementById('cal-next-week').addEventListener('click', () => {
-    currentWeekStart.setDate(currentWeekStart.getDate() + 7);
-    renderCalendar();
-  });
-
-  const weekBtn = document.getElementById('view-week-btn');
-  const listBtn = document.getElementById('view-list-btn');
-  const weekView = document.getElementById('calendar-week');
-  const listView = document.getElementById('calendar-list');
-
-  weekBtn.addEventListener('click', () => {
-    weekBtn.classList.add('active');
-    listBtn.classList.remove('active');
-    weekView.classList.remove('hidden');
-    listView.classList.add('hidden');
-  });
-
-  listBtn.addEventListener('click', () => {
-    listBtn.classList.add('active');
-    weekBtn.classList.remove('active');
-    listView.classList.remove('hidden');
-    weekView.classList.add('hidden');
-  });
+  render();
+  document.getElementById('cal-prev').addEventListener('click', () => { weekStart.setDate(weekStart.getDate() - 7); render(); });
+  document.getElementById('cal-next').addEventListener('click', () => { weekStart.setDate(weekStart.getDate() + 7); render(); });
 }
 
-function renderCalendar() {
-  const weekContainer = document.getElementById('calendar-week');
-  const listContainer = document.getElementById('calendar-list');
-  const weekLabel = document.getElementById('cal-week-label');
+function render() {
+  const grid = document.getElementById('schedule-grid');
+  const label = document.getElementById('cal-label');
+  const end = new Date(weekStart); end.setDate(end.getDate() + 6);
+  const m = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+  const dn = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+  const today = new Date(); today.setHours(0, 0, 0, 0);
 
-  const weekEnd = new Date(currentWeekStart);
-  weekEnd.setDate(weekEnd.getDate() + 6);
+  label.textContent = m[weekStart.getMonth()] === m[end.getMonth()]
+    ? `${m[weekStart.getMonth()]} ${weekStart.getDate()} – ${end.getDate()}, ${end.getFullYear()}`
+    : `${m[weekStart.getMonth()]} ${weekStart.getDate()} – ${m[end.getMonth()]} ${end.getDate()}`;
 
-  const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
-  const startMonth = months[currentWeekStart.getMonth()];
-  const endMonth = months[weekEnd.getMonth()];
-
-  weekLabel.textContent = startMonth === endMonth
-    ? `${startMonth} ${currentWeekStart.getDate()} – ${weekEnd.getDate()}, ${weekEnd.getFullYear()}`
-    : `${startMonth} ${currentWeekStart.getDate()} – ${endMonth} ${weekEnd.getDate()}`;
-
-  const dayNames = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
-  const today = new Date();
-  today.setHours(0, 0, 0, 0);
-
-  // Week View
-  weekContainer.innerHTML = '';
+  grid.innerHTML = '';
   for (let i = 0; i < 7; i++) {
-    const date = new Date(currentWeekStart);
-    date.setDate(date.getDate() + i);
-    const isToday = date.getTime() === today.getTime();
-    const dayClasses = CLASSES.filter(c => c.dayOfWeek === date.getDay());
-
-    const dayEl = document.createElement('div');
-    dayEl.className = `cal-day${isToday ? ' today' : ''}`;
-    dayEl.innerHTML = `
-      <div class="cal-day-header">
-        <span class="cal-day-name">${dayNames[date.getDay()]}</span>
-        <span class="cal-day-number">${date.getDate()}</span>
-      </div>
-      <div class="cal-day-classes">
-        ${dayClasses.map(c => `
-          <button class="cal-class-chip ${c.type}" data-class-id="${c.id}" data-date="${date.toISOString()}">
-            ${c.name}
-            <span class="cal-class-time">${formatTime(c.hour, c.minute)}</span>
-          </button>
-        `).join('')}
-      </div>
-    `;
-    weekContainer.appendChild(dayEl);
-  }
-
-  // List View
-  listContainer.innerHTML = '';
-  for (let i = 0; i < 7; i++) {
-    const date = new Date(currentWeekStart);
-    date.setDate(date.getDate() + i);
-    const dayClasses = CLASSES.filter(c => c.dayOfWeek === date.getDay());
-    if (dayClasses.length === 0) continue;
-
-    const groupEl = document.createElement('div');
-    groupEl.className = 'list-day-group';
-    groupEl.innerHTML = `
-      <div class="list-day-label">${dayNames[date.getDay()]}, ${months[date.getMonth()]} ${date.getDate()}</div>
-      ${dayClasses.map(c => `
-        <div class="list-class-card" data-class-id="${c.id}" data-date="${date.toISOString()}">
-          <span class="list-class-time">${formatTime(c.hour, c.minute)}</span>
-          <div class="list-class-indicator ${c.type}"></div>
-          <div class="list-class-info">
-            <div class="list-class-name">${c.name}</div>
-            <div class="list-class-details">${c.instructor} · ${c.duration} · ${c.spots} spots left</div>
-          </div>
-          <button class="list-class-book" data-class-id="${c.id}" data-date="${date.toISOString()}">Book</button>
+    const d = new Date(weekStart); d.setDate(d.getDate() + i);
+    const isToday = d.getTime() === today.getTime();
+    const cls = CLASSES.filter(c => c.dayOfWeek === d.getDay());
+    grid.innerHTML += `
+      <div class="sched-day${isToday ? ' today' : ''}">
+        <div class="sched-day-head">
+          <span class="sched-day-name">${dn[d.getDay()]}</span>
+          <span class="sched-day-num">${d.getDate()}</span>
         </div>
-      `).join('')}
-    `;
-    listContainer.appendChild(groupEl);
+        <div class="sched-classes">
+          ${cls.map(c => `
+            <button class="sched-chip ${c.type}" data-id="${c.id}" data-date="${d.toISOString()}">
+              ${c.name}
+              <span class="sched-chip-time">${fmtTime(c.hour, c.minute)}</span>
+            </button>
+          `).join('')}
+        </div>
+      </div>`;
   }
 
-  // Click handlers
-  document.querySelectorAll('[data-class-id]').forEach(el => {
-    el.addEventListener('click', (e) => {
-      const id = parseInt(e.currentTarget.dataset.classId);
-      const dateStr = e.currentTarget.dataset.date;
-      openClassModal(id, dateStr);
-    });
+  grid.querySelectorAll('[data-id]').forEach(el => {
+    el.addEventListener('click', () => openClass(+el.dataset.id, el.dataset.date));
   });
 }
 
-function formatTime(hour, minute) {
-  const period = hour >= 12 ? 'PM' : 'AM';
-  const h = hour > 12 ? hour - 12 : hour === 0 ? 12 : hour;
-  return `${h}:${minute.toString().padStart(2, '0')} ${period}`;
+function fmtTime(h, m) {
+  const p = h >= 12 ? 'PM' : 'AM';
+  return `${h > 12 ? h - 12 : h || 12}:${String(m).padStart(2, '0')} ${p}`;
 }
 
 
 // ===================================================
 // MODALS
 // ===================================================
-let currentBookingClass = null;
+let booking = null;
 
 function initModals() {
-  document.getElementById('modal-close').addEventListener('click', closeClassModal);
-  document.getElementById('class-modal').addEventListener('click', (e) => {
-    if (e.target === e.currentTarget) closeClassModal();
+  const cm = document.getElementById('class-modal');
+  const bm = document.getElementById('booking-modal');
+
+  document.getElementById('modal-close').addEventListener('click', () => close(cm));
+  cm.addEventListener('click', e => { if (e.target === cm) close(cm); });
+
+  document.getElementById('m-book-btn').addEventListener('click', () => {
+    close(cm);
+    openBooking();
   });
 
-  document.getElementById('modal-book-btn').addEventListener('click', () => {
-    closeClassModal();
-    openBookingModal();
-  });
+  document.getElementById('booking-close').addEventListener('click', () => close(bm));
+  bm.addEventListener('click', e => { if (e.target === bm) close(bm); });
 
-  document.getElementById('booking-modal-close').addEventListener('click', closeBookingModal);
-  document.getElementById('booking-modal').addEventListener('click', (e) => {
-    if (e.target === e.currentTarget) closeBookingModal();
-  });
-
-  document.getElementById('booking-form').addEventListener('submit', (e) => {
+  document.getElementById('book-form').addEventListener('submit', e => {
     e.preventDefault();
-    const email = document.getElementById('booking-email').value;
-    document.getElementById('booking-step-1').classList.add('hidden');
-    document.getElementById('booking-step-2').classList.remove('hidden');
-    document.getElementById('booking-confirm-details').textContent =
-      `${currentBookingClass.name} — Confirmation sent to ${email}`;
+    const email = document.getElementById('book-email').value;
+    document.getElementById('book-step-1').classList.add('hidden');
+    document.getElementById('book-step-2').classList.remove('hidden');
+    document.getElementById('book-confirm-text').textContent =
+      `${booking.name} — confirmation sent to ${email}`;
   });
 
-  document.getElementById('booking-done-btn').addEventListener('click', closeBookingModal);
-
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') { closeClassModal(); closeBookingModal(); }
-  });
+  document.getElementById('book-done-btn').addEventListener('click', () => close(bm));
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') { close(cm); close(bm); } });
 }
 
-function openClassModal(classId, dateStr) {
-  const cls = CLASSES.find(c => c.id === classId);
-  if (!cls) return;
-  currentBookingClass = { ...cls, date: dateStr };
-
-  const date = new Date(dateStr);
+function openClass(id, dateStr) {
+  const c = CLASSES.find(x => x.id === id);
+  if (!c) return;
+  booking = { ...c, date: dateStr };
+  const d = new Date(dateStr);
   const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
   const mons = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
-  document.getElementById('modal-type-badge').textContent = cls.type;
-  document.getElementById('modal-type-badge').className = `class-type-badge ${cls.type}`;
-  document.getElementById('modal-title').textContent = cls.name;
-  document.getElementById('modal-datetime').textContent =
-    `${days[date.getDay()]}, ${mons[date.getMonth()]} ${date.getDate()} · ${formatTime(cls.hour, cls.minute)}`;
-  document.getElementById('modal-instructor').textContent = cls.instructor;
-  document.getElementById('modal-duration').textContent = cls.duration;
-  document.getElementById('modal-level').textContent = cls.level;
-  document.getElementById('modal-spots').textContent = `${cls.spots} of ${cls.maxSpots}`;
-  document.getElementById('modal-description-text').textContent = cls.description;
-  document.getElementById('modal-price').textContent = cls.price;
+  document.getElementById('m-badge').textContent = c.type;
+  document.getElementById('m-badge').className = `m-badge ${c.type}`;
+  document.getElementById('m-title').textContent = c.name;
+  document.getElementById('m-datetime').textContent = `${days[d.getDay()]}, ${mons[d.getMonth()]} ${d.getDate()} · ${fmtTime(c.hour, c.minute)}`;
+  document.getElementById('m-instructor').textContent = c.instructor;
+  document.getElementById('m-duration').textContent = c.duration;
+  document.getElementById('m-level').textContent = c.level;
+  document.getElementById('m-spots').textContent = `${c.spots} / ${c.maxSpots}`;
+  document.getElementById('m-desc').textContent = c.desc;
+  document.getElementById('m-price').textContent = c.price;
 
-  document.getElementById('class-modal').classList.add('active');
+  document.getElementById('class-modal').classList.add('open');
   document.body.style.overflow = 'hidden';
 }
 
-function closeClassModal() {
-  document.getElementById('class-modal').classList.remove('active');
-  document.body.style.overflow = '';
-}
+function openBooking() {
+  if (!booking) return;
+  document.getElementById('book-step-1').classList.remove('hidden');
+  document.getElementById('book-step-2').classList.add('hidden');
+  document.getElementById('book-form').reset();
 
-function openBookingModal() {
-  if (!currentBookingClass) return;
-  document.getElementById('booking-step-1').classList.remove('hidden');
-  document.getElementById('booking-step-2').classList.add('hidden');
-  document.getElementById('booking-form').reset();
+  const d = new Date(booking.date);
+  const dn = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+  const mn = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+  document.getElementById('book-summary').textContent =
+    `${booking.name} · ${dn[d.getDay()]}, ${mn[d.getMonth()]} ${d.getDate()} at ${fmtTime(booking.hour, booking.minute)}`;
 
-  const date = new Date(currentBookingClass.date);
-  const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
-  const mons = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-  document.getElementById('booking-class-summary').textContent =
-    `${currentBookingClass.name} · ${days[date.getDay()]}, ${mons[date.getMonth()]} ${date.getDate()} at ${formatTime(currentBookingClass.hour, currentBookingClass.minute)}`;
-
-  document.getElementById('booking-modal').classList.add('active');
+  document.getElementById('booking-modal').classList.add('open');
   document.body.style.overflow = 'hidden';
 }
 
-function closeBookingModal() {
-  document.getElementById('booking-modal').classList.remove('active');
+function close(modal) {
+  modal.classList.remove('open');
   document.body.style.overflow = '';
 }
